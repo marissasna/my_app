@@ -6,7 +6,7 @@
     <%= text_field_tag 'keyword', '' %>
     <br/>
     <%= submit_tag 'search' %>
-    
+
 <%- end %>
 </div>
 <small>Keyword: <%= params[:keyword] %></small>
@@ -14,10 +14,10 @@
     <%- for article in @articles do %>
     <li>
         <strong><%= link_to article.title, read_path(article_id: article.id) %></strong>
-        
+
         <small>
-        Oleh <%= article.user.full_name %>    
-        pada <%= article.created_at.to_s(:short) %>            
+        Oleh <%= article.user.full_name %>
+        pada <%= article.created_at.to_s(:short) %>  
         </small>
     </li>
     <%- end %>

@@ -6,7 +6,7 @@ class HomeController < ApplicationController
   def read
     @article = Article.where(id: params[:article_id]).first
   end
-
+  
   def save_comment
     @article = Article.where(id: params[:article_id]).first
     comment = @article.comments.new
